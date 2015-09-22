@@ -41,7 +41,7 @@ namespace TLogik.Krypt.Tests.Passwords
         }
 
         [TestMethod, TestCategory("Unit")]
-        public void Encrypt_ShouldUseProvidedCryptography1()
+        public void Validate_Shou()
         {
             //SETUP
             const string originalData = "Mjello";
@@ -72,40 +72,61 @@ namespace TLogik.Krypt.Tests.Passwords
                 $"The lenght of the generated salt is not of correct length. Expected: saltlength: {salt.Length} >= {crypto.MinimumSaltLength}");
         }
 
-        [TestMethod()]
-        public void EncryptionProviderTest()
+        [TestMethod, TestCategory("Unit")]
+        public void Password_Random_ShouldGenerateRandomPassword()
         {
-            Assert.Fail();
+            //SETUP
+            var crypto = new CryptographySha512();
+            var provider = new EncryptionProvider(crypto);
+
+            //EXECUTE
+            var password = provider.RandomPassword();
+
+            //ASSERT
+            Assert.IsTrue(password.Length >= crypto.MinimumSaltLength,
+                $"The lenght of the generated password is not of correct length. Expected: saltlength: {password.Length} >= {crypto.MinimumSaltLength}");
         }
 
-        [TestMethod()]
-        public void EncryptionProviderTest1()
+        [TestMethod, TestCategory("Unit")]
+        public void Password_RandomWithMinimumLength_ShouldGenerateRandomPassword()
         {
-            Assert.Fail();
+            //SETUP
+            var crypto = new CryptographySha512();
+            var provider = new EncryptionProvider(crypto);
+            const int minimumLength = 2;
+
+            //EXECUTE
+            var password = provider.RandomPassword(minimumLength);
+
+            //ASSERT
+            Assert.IsTrue(password.Length >= minimumLength,
+                $"The lenght of the generated password is not of correct length. Expected: saltlength: {password.Length} >= {minimumLength}");
         }
 
-        [TestMethod()]
-        public void EncryptTest()
+        [TestMethod, TestCategory("Unit")]
+        [ExpectedException(typeof (ArgumentException))]
+        public void Password_MinimumLengthEqualZero_ShouldThrow()
         {
-            Assert.Fail();
+            //SETUP
+            var crypto = new CryptographySha512();
+            var provider = new EncryptionProvider(crypto);
+            const int minimumLength = 0;
+
+            //EXECUTE
+            var password = provider.RandomPassword(minimumLength);
         }
 
-        [TestMethod()]
-        public void ValidateTest()
+        [TestMethod, TestCategory("Unit")]
+        [ExpectedException(typeof (ArgumentException))]
+        public void Password_MinimumLengthLessThanZero_ShouldThrow()
         {
-            Assert.Fail();
-        }
+            //SETUP
+            var crypto = new CryptographySha512();
+            var provider = new EncryptionProvider(crypto);
+            const int minimumLength = -1;
 
-        [TestMethod()]
-        public void RandomPasswordTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
-        public void RandomPasswordTest1()
-        {
-            Assert.Fail();
+            //EXECUTE
+            var password = provider.RandomPassword(minimumLength);
         }
     }
 }
