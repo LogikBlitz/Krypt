@@ -1,12 +1,6 @@
 # Krypt
 Small library for managing password hashing in a safe manner in the .NET domain
 
-## Continuous Integration and Issue Management provided by CodeBetter and JetBrains
+## Continuous Integration and Issue Management provided by AppVeyor
+[![Build status](https://ci.appveyor.com/api/projects/status/y5arohm2xcy8dmw3/branch/master?svg=true)](https://ci.appveyor.com/project/LogikBlitz/krypt/branch/master)
 
-[NuGetPlus TeamCity Project](http://teamcity.codebetter.com/project.html?projectId=project363) is kindly provided by [CodeBetter](http://codebetter.com/) and [JetBrains](http://www.jetbrains.com/).
-
-[NuGetPlus YouTrack Instance](http://nugetplus.myjetbrains.com) provided by [JetBrains](http://www.jetbrains.com/) under their [OSS Project License](http://www.jetbrains.com/youtrack/buy/buy.jsp).
-
-Many thanks to both CodeBetter and JetBrains for provided these services.
-
-![YouTrack and TeamCity](http://www.jetbrains.com/img/banners/Codebetter300x250.png) 
