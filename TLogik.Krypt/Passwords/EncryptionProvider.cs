@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TLogik.Krypt.Passwords
 {
-    public class EncryptionProvider //: ISaltHasher
+    public class EncryptionProvider : IEncryptionProvider
     {
         private readonly ICryptography _cryptographyProvider;
 

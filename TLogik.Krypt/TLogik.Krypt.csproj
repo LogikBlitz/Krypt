@@ -43,7 +43,11 @@
     <Compile Include="Passwords\CryptographySha512.cs" />
     <Compile Include="Passwords\ICryptography.cs" />
     <Compile Include="Passwords\EncryptionProvider.cs" />
+    <Compile Include="Passwords\IEncryptionProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TLogik.Krypt.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

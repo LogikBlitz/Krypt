@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/LogikBlitz/Krypt</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <releaseNotes>Initial Release</releaseNotes>
+    <releaseNotes>Encryptionprovided exposed as interface for easy IOC</releaseNotes>
     <copyright>Copyright 2015 Thomas Blitz</copyright>
     <tags>Encryption Krypt Password Salt SHA512 basic authentication</tags>
   </metadata>
