@@ -41,7 +41,7 @@ namespace TLogik.Krypt.Tests.Passwords
         }
 
         [TestMethod, TestCategory("Unit")]
-        public void Validate_Shou()
+        public void Validate_EncryptedPasswordAndSald_ShouldValidatePasswordUsingSalt()
         {
             //SETUP
             const string originalData = "Mjello";

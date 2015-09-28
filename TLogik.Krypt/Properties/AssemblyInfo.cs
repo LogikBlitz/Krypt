@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Encryption")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("TLogik.Krypt")]
+[assembly: AssemblyDescription("Validate and encrrypt passwords based on hashing and salting passwords. Use for basic authentication.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Encryption")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCompany("Thomas Blitz")]
+[assembly: AssemblyProduct("TLogik.Krypt")]
+[assembly: AssemblyCopyright("Copyright ©  Thomas Blitz 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

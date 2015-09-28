@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/LogikBlitz/Krypt/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/LogikBlitz/Krypt</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>Copyright 2015 Thomas Blitz</copyright>
+    <tags>Encryption Krypt Password Salt SHA512 basic authentication</tags>
+  </metadata>
+</package>
