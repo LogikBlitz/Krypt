@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("TLogik.Krypt")]
-[assembly: AssemblyDescription("Validate and encrrypt passwords based on hashing and salting passwords. Use for basic authentication.")]
+[assembly: AssemblyDescription("Validate and encrypt passwords based on hashing and salting passwords. Use for basic authentication.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Thomas Blitz")]
 [assembly: AssemblyProduct("TLogik.Krypt")]
