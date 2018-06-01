@@ -1,17 +1,55 @@
-version: 1.0.{build}
-os: Visual Studio 2015
-configuration: Release
-platform: Any CPU
+version: '1.0.{build}'
+image: Visual Studio 2017
+branches:
+  only:
+  - master
+  - netstandard
+  - develop
+dotnet_csproj:
+  patch: true
+  file: '**\Krypt.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+init:
+  # Good practise, because Windows line endings are different from Unix/Linux ones
+  - git config --global core.autocrlf true
+# set clone depth
+clone_depth: 5 
+install:
+  # Install repo specific stuff here
 before_build:
-- ps: nuget restore
-build:
-  publish_nuget: true
-  publish_nuget_symbols: true
-  include_nuget_references: true
-  verbosity: minimal
+  # Display .NET Core version
+  - dotnet --version
+  # Display minimal restore text
+  - dotnet restore ./src/Krypt.sln --verbosity m
+build_script:
+  - dotnet pack ./src/Krypt/Krypt.csproj --include-source --include-symbols --configuration Release
+test_script:
+  # restore packages for our unit tests
+  # run the unit tests (requires changing into the test directory) Require coverlet for coverage calculation
+  - dotnet test ./src/Krypt.Test/Krypt.Test.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+after_test:
+- ps: >-
+    Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
+
+    bash codecov.sh -f "./src/Krypt.Test/coverage.xml" -t 2394754a-a65a-49a7-9277-6a2ba3ee917a
 deploy:
   provider: NuGet
+  name: production
+  on:
+    branch: master
   api_key:
-    secure: lvyCj7LQWuEq//G7DuoqV8VHKshnrlGdULqs9WinPEt297+6u2c5tHjIiRavHqxD
+    secure: Md9Vp7ciqXOXdcslNVOamwENnV+yvnfUUo72fq34WfnTeUND4WuLLdhMH68PLjP4
   skip_symbols: false
   artifact: /.*\.nupkg/
+artifacts:
+  - path: '**\*.nupkg' # find all NuGet packages recursively'
+    name: krypt
+    type: NuGetPackage
+after_build:
+  # For once the build has completed
+on_finish :
+  # any cleanup in here

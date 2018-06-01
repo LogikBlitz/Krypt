@@ -1,4 +1,4 @@
-namespace TLogik.Krypt.Passwords
+namespace Krypt.Passwords
 {
     public interface IEncryptionProvider {
         /// <summary>
@@ -26,7 +26,7 @@ namespace TLogik.Krypt.Passwords
         string RandomPassword(int minimumLength);
 
         /// <summary>
-        ///     Creates a Cryptological secure password randomly using the defaul;t length defined by the
+        ///     Creates a Cryptological secure password randomly using the default length defined by the
         ///     <see cref="ICryptography.MinimumSaltLength" />
         /// </summary>
         /// <returns>a password</returns>

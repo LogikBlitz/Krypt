@@ -1,4 +1,4 @@
-﻿namespace TLogik.Krypt.Passwords
+﻿namespace Krypt.Passwords
 {
     /// <summary>
     ///     Defines simple methods for creating cryptographically safe hashes.

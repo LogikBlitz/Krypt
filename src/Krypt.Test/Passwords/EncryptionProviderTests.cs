@@ -1,123 +1,129 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using FluentAssertions;
+using Krypt.Passwords;
 using Moq;
-using TLogik.Krypt.Passwords;
+using Xunit;
 
-namespace TLogik.Krypt.Tests.Passwords
+namespace Krypt.Test.Passwords
 {
-    [TestClass()]
     public class EncryptionProviderTests
     {
-        [TestMethod, TestCategory("Unit")]
-        [ExpectedException(typeof (ArgumentNullException))]
+        [Fact]
         public void Ctor_EncryptionProviderIsNull_ShouldThrow()
         {
-            var provider = new EncryptionProvider(null);
+            //ACT
+            Action act = () =>  new EncryptionProvider(null);
+            //ASSERT
+            act.Should().Throw<ArgumentNullException>("the cryptorovider is null");
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Fact]
         public void Ctor_DefaultConstructor_ShouldNotThrow()
         {
-            var provider = new EncryptionProvider();
+            //ACT
+            Action act = () =>  new EncryptionProvider();
+            //ASSERT
+            act.Should().NotThrow("the default ctor instanciates with default cryptoprovider");
+            
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Fact]
         public void Encrypt_ShouldUseProvidedCryptography()
         {
-            //SETUP
+            //ARRANGE
             var cryptoMock = new Mock<ICryptography>(MockBehavior.Strict);
             var mockHash = "FooBar";
             cryptoMock.Setup(c => c.MinimumSaltLength).Returns(mockHash.Length);
             cryptoMock.Setup(c => c.ComputeHash(It.IsAny<string>())).Returns(mockHash);
             const string originalData = "Mjello";
 
-            //EXECUTE
+            //ACT
             var provider = new EncryptionProvider(cryptoMock.Object);
             var salt = provider.GenerateSalt();
             var encrypted = provider.Encrypt(originalData, salt);
 
             //ASSERT
-            Assert.AreEqual(mockHash, encrypted);
+            mockHash.Should().Be(encrypted);
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Fact]
         public void Validate_EncryptedPasswordAndSald_ShouldValidatePasswordUsingSalt()
         {
-            //SETUP
+            //ARRANGE
             const string originalData = "Mjello";
             const string salt = "foobar123";
 
-            //EXECUTE
+            //ACT
             var provider = new EncryptionProvider();
             var encrypted = provider.Encrypt(originalData, salt);
-            Assert.AreNotEqual(originalData, encrypted);
 
-            var areEqual = provider.Validate(originalData, salt, encrypted);
+            var isValid = provider.Validate(originalData, salt, encrypted);
             //ASSERT
-            Assert.IsTrue(areEqual);
+            originalData.Should().NotBe(encrypted);
+            isValid.Should().BeTrue();
         }
 
-        [TestMethod, TestCategory("Unit")]
+        [Fact]
         public void Salt_LengthOfSalt_ShouldBeGreaterThanOrEqualToRecommendedSaltLength()
         {
-            //SETUP
+            //ARRANGE
             var crypto = new CryptographySha512();
             var provider = new EncryptionProvider(crypto);
 
-            //EXECUTE
+            //ACT
             var salt = provider.GenerateSalt();
 
             //ASSERT
-            Assert.IsTrue(salt.Length >= crypto.MinimumSaltLength,
-                $"The lenght of the generated salt is not of correct length. Expected: saltlength: {salt.Length} >= {crypto.MinimumSaltLength}");
-        }
+            salt.Length.Should().BeGreaterOrEqualTo(crypto.MinimumSaltLength, $"The lenght of the generated salt is not of correct length. Expected: saltlength: {salt.Length} >= {crypto.MinimumSaltLength}");
+              }
 
-        [TestMethod, TestCategory("Unit")]
+        [Fact]
         public void Password_Random_ShouldGenerateRandomPassword()
         {
-            //SETUP
+            //ARRANGE
             var crypto = new CryptographySha512();
             var provider = new EncryptionProvider(crypto);
 
-            //EXECUTE
+            //ACT
             var password = provider.RandomPassword();
 
             //ASSERT
-            Assert.IsTrue(password.Length >= crypto.MinimumSaltLength,
-                $"The lenght of the generated password is not of correct length. Expected: saltlength: {password.Length} >= {crypto.MinimumSaltLength}");
-        }
+            password.Length.Should().BeGreaterOrEqualTo(crypto.MinimumSaltLength);
+              }
 
-        [TestMethod, TestCategory("Unit")]
+        [Fact]
         public void Password_RandomWithMinimumLength_ShouldGenerateRandomPassword()
         {
-            //SETUP
+            //ARRANGE
             var crypto = new CryptographySha512();
             var provider = new EncryptionProvider(crypto);
             const int minimumLength = 2;
 
-            //EXECUTE
+            //ACT
             var password = provider.RandomPassword(minimumLength);
 
             //ASSERT
-            Assert.IsTrue(password.Length >= minimumLength,
-                $"The lenght of the generated password is not of correct length. Expected: saltlength: {password.Length} >= {minimumLength}");
+            password.Length.Should().BeGreaterOrEqualTo(minimumLength);          
+            
         }
 
-        [TestMethod, TestCategory("Unit")]
-        [ExpectedException(typeof (ArgumentException))]
+        [Fact]
         public void Password_MinimumLengthEqualZero_ShouldThrow()
         {
-            //SETUP
+            //ARRANGE
             var crypto = new CryptographySha512();
             var provider = new EncryptionProvider(crypto);
             const int minimumLength = 0;
 
-            //EXECUTE
-            var password = provider.RandomPassword(minimumLength);
+            //ACT 
+            Action act = () => provider.RandomPassword(minimumLength);
+            
+            //ASSERT
+            act.Should().Throw<ArgumentException>();
+
         }
 
-        [TestMethod, TestCategory("Unit")]
-        [ExpectedException(typeof (ArgumentException))]
+        [Fact]
         public void Password_MinimumLengthLessThanZero_ShouldThrow()
         {
             //SETUP
@@ -125,8 +131,11 @@ namespace TLogik.Krypt.Tests.Passwords
             var provider = new EncryptionProvider(crypto);
             const int minimumLength = -1;
 
-            //EXECUTE
-            var password = provider.RandomPassword(minimumLength);
+            //ACT
+            Action act = () => provider.RandomPassword(minimumLength);
+            
+            //ASSERT
+            act.Should().Throw<ArgumentException>("the length of the password must be greater than zero");
         }
     }
 }
