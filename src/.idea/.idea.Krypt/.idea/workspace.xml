@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6bdc346-d898-4e16-8420-d2c6d56f296b" name="Default" comment="" />
+    <list default="true" id="b6bdc346-d898-4e16-8420-d2c6d56f296b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../appveyor.yml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -280,12 +282,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527855999856</updated>
-      <workItem from="1527856002649" duration="2380000" />
+      <workItem from="1527856002649" duration="2615000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2380000" />
+    <option name="totallyTimeSpent" value="2615000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

@@ -1,17 +1,40 @@
-version: 1.0.{build}
-os: Visual Studio 2015
-configuration: Release
-platform: Any CPU
+version: '1.0.{build}'
+image: Visual Studio 2017
+branches:
+  only:
+  - master
+  - netstandard
+  - develop
+dotnet_csproj:
+  patch: true
+  file: '**\Krypt.csproj'
+  version: '{version}'
+  package_version: '{version}'
+  assembly_version: '{version}'
+  file_version: '{version}'
+  informational_version: '{version}'
+init:
+  # Good practise, because Windows line endings are different from Unix/Linux ones
+  - git config --global core.autocrlf true
+# set clone depth
+clone_depth: 5 
+install:
+  # Install repo specific stuff here
 before_build:
-- ps: nuget restore
-build:
-  publish_nuget: true
-  publish_nuget_symbols: true
-  include_nuget_references: true
-  verbosity: minimal
-deploy:
-  provider: NuGet
-  api_key:
-    secure: lvyCj7LQWuEq//G7DuoqV8VHKshnrlGdULqs9WinPEt297+6u2c5tHjIiRavHqxD
-  skip_symbols: false
-  artifact: /.*\.nupkg/
+  # Display .NET Core version
+  - cmd: dotnet --version
+  # Display minimal restore text
+  - cmd: dotnet restore ./src/Krypt.sln --verbosity m
+build_script:
+  - cmd: dotnet pack ./src/Krypt.csproj
+after_build:
+  # For once the build has completed
+
+test_script:
+  # restore packages for our unit tests
+  # - dotnet restore ./src/Krypt.Test.csproj --verbosity m
+  # run the unit tests (requires changing into the test directory)
+  - dotnet test ./src/Krypt.Test.csproj
+on_finish :
+  # any cleanup in here
+deploy: off
