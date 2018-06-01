@@ -26,7 +26,7 @@ before_build:
   # Display minimal restore text
   - dotnet restore ./src/Krypt.sln --verbosity m
 build_script:
-  - cmd: dotnet pack ./src/Krypt.csproj
+  - cmd: dotnet pack ./src/Krypt/Krypt.csproj
 after_build:
   # For once the build has completed
 
@@ -34,7 +34,7 @@ test_script:
   # restore packages for our unit tests
   # - dotnet restore ./src/Krypt.Test.csproj --verbosity m
   # run the unit tests (requires changing into the test directory)
-  - dotnet test ./src/Krypt.Test.csproj
+  - dotnet test ./src/Krypt.Test/Krypt.Test.csproj
 on_finish :
   # any cleanup in here
 deploy: off
