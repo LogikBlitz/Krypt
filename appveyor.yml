@@ -41,7 +41,7 @@ deploy:
     secure: Md9Vp7ciqXOXdcslNVOamwENnV+yvnfUUo72fq34WfnTeUND4WuLLdhMH68PLjP4
   skip_symbols: false
   artifact: /.*\.nupkg/
-artifact:
+artifacts:
   - path: '**\*.nupkg' # find all NuGet packages recursively'
     name: krypt
     type: NuGetPackage
