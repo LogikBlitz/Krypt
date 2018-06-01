@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace TLogik.Krypt.Passwords
+namespace Krypt.Passwords
 {
     public class EncryptionProvider : IEncryptionProvider
     {
@@ -67,7 +67,7 @@ namespace TLogik.Krypt.Passwords
         }
 
         /// <summary>
-        ///     Validates the hashedPassword up agains the provided password and hash.
+        ///     Validates the hashedPassword against the provided password and hash.
         /// </summary>
         /// <param name="original">The password to validate</param>
         /// <param name="salt">The salt used to created the hashedPassword</param>
