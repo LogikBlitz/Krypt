@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace TLogik.Krypt.Passwords
+namespace Krypt.Passwords
 {
     /// <summary>
     ///     Creates cryptograhical safe hashes using the
