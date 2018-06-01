@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6bdc346-d898-4e16-8420-d2c6d56f296b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../appveyor.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Krypt/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krypt/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Krypt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krypt/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,16 +28,7 @@
       </file>
       <file leaf-file-name="StringCryptographyTests.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Krypt.Test/Text/StringCryptographyTests.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1527828801823" expanded="false" signature="6:50" ph="..." />
-                <marker date="1527828801823" expanded="true" signature="132:822" ph="{...}" />
-                <marker date="1527828801823" expanded="true" signature="176:820" ph="{...}" />
-                <marker date="1527828801823" expanded="true" signature="345:814" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="CryptographySha512.cs" pinned="false" current-in-tab="false">
@@ -91,25 +83,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
               <caret line="76" column="79" selection-start-line="76" selection-start-column="79" selection-end-line="76" selection-end-column="79" />
-              <folding>
-                <marker date="1527857955690" expanded="true" signature="6:84" ph="..." />
-                <marker date="1527857955690" expanded="true" signature="116:4485" ph="{...}" />
-                <marker date="1527857955690" expanded="true" signature="159:4483" ph="{...}" />
-                <marker date="1527857955690" expanded="true" signature="244:449" ph="{...}" />
-                <marker date="1527857955690" expanded="true" signature="526:752" ph="{...}" />
-                <marker date="1527857955690" expanded="true" signature="828:1471" ph="{...}" />
-                <marker date="1527857955690" expanded="true" signature="1575:2039" ph="{...}" />
-                <marker date="1527857955690" expanded="true" signature="2145:2600" ph="{...}" />
-                <marker date="1527857955690" expanded="true" signature="2683:3019" ph="{...}" />
-                <marker date="1527857955690" expanded="true" signature="3119:3515" ph="{...}" />
-                <marker date="1527857955690" expanded="true" signature="3597:3969" ph="{...}" />
-                <marker date="1527857955690" expanded="true" signature="4054:4477" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringCryptography.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StringCryptography.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Krypt/Text/StringCryptography.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -139,6 +117,15 @@
                 <marker date="1527859837924" expanded="true" signature="5015:5271" ph="{...}" />
                 <marker date="1527859837924" expanded="true" signature="5121:5245" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Krypt.csproj" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Krypt/Krypt.csproj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -202,6 +189,7 @@
         <option value="$PROJECT_DIR$/Krypt/Passwords/EncryptionProvider.cs" />
         <option value="$PROJECT_DIR$/Krypt.Test/Passwords/EncryptionProviderTests.cs" />
         <option value="$PROJECT_DIR$/Krypt/Text/StringCryptography.cs" />
+        <option value="$PROJECT_DIR$/Krypt/Krypt.csproj" />
       </list>
     </option>
   </component>
@@ -241,12 +229,6 @@
               <item name="Krypt (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Krypt.Test" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Krypt (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Krypt.Test" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Passwords" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -282,12 +264,48 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527855999856</updated>
-      <workItem from="1527856002649" duration="2615000" />
+      <workItem from="1527856002649" duration="3649000" />
     </task>
+    <task id="LOCAL-00001" summary="set to netcore 2,0 for test">
+      <created>1527876819666</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527876819667</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix csproj path in appveyor yaml">
+      <created>1527876990574</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527876990574</updated>
+    </task>
+    <task id="LOCAL-00003" summary="lets try ubuntu image">
+      <created>1527877214862</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527877214862</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updated csproj">
+      <created>1527878471925</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1527878471925</updated>
+    </task>
+    <task id="LOCAL-00005" summary="use vs image for build">
+      <created>1527878610523</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1527878610524</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2615000" />
+    <option name="totallyTimeSpent" value="3649000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -330,6 +348,14 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="set to netcore 2,0 for test" />
+    <MESSAGE value="fix csproj path in appveyor yaml" />
+    <MESSAGE value="lets try ubuntu image" />
+    <MESSAGE value="updated csproj" />
+    <MESSAGE value="use vs image for build" />
+    <option name="LAST_COMMIT_MESSAGE" value="use vs image for build" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Krypt/Class1.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -349,16 +375,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Krypt.Test/Text/StringCryptographyTests.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1527828801823" expanded="false" signature="6:50" ph="..." />
-            <marker date="1527828801823" expanded="true" signature="132:822" ph="{...}" />
-            <marker date="1527828801823" expanded="true" signature="176:820" ph="{...}" />
-            <marker date="1527828801823" expanded="true" signature="345:814" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Krypt/Passwords/CryptographySha512.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -437,20 +454,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="76" column="79" selection-start-line="76" selection-start-column="79" selection-end-line="76" selection-end-column="79" />
-          <folding>
-            <marker date="1527857955690" expanded="true" signature="6:84" ph="..." />
-            <marker date="1527857955690" expanded="true" signature="116:4485" ph="{...}" />
-            <marker date="1527857955690" expanded="true" signature="159:4483" ph="{...}" />
-            <marker date="1527857955690" expanded="true" signature="244:449" ph="{...}" />
-            <marker date="1527857955690" expanded="true" signature="526:752" ph="{...}" />
-            <marker date="1527857955690" expanded="true" signature="828:1471" ph="{...}" />
-            <marker date="1527857955690" expanded="true" signature="1575:2039" ph="{...}" />
-            <marker date="1527857955690" expanded="true" signature="2145:2600" ph="{...}" />
-            <marker date="1527857955690" expanded="true" signature="2683:3019" ph="{...}" />
-            <marker date="1527857955690" expanded="true" signature="3119:3515" ph="{...}" />
-            <marker date="1527857955690" expanded="true" signature="3597:3969" ph="{...}" />
-            <marker date="1527857955690" expanded="true" signature="4054:4477" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -483,6 +486,13 @@
             <marker date="1527859837924" expanded="true" signature="5015:5271" ph="{...}" />
             <marker date="1527859837924" expanded="true" signature="5121:5245" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Krypt/Krypt.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
         </state>
       </provider>
     </entry>

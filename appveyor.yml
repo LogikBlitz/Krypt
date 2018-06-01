@@ -26,15 +26,23 @@ before_build:
   # Display minimal restore text
   - dotnet restore ./src/Krypt.sln --verbosity m
 build_script:
-  - cmd: dotnet pack ./src/Krypt/Krypt.csproj
-after_build:
-  # For once the build has completed
-
+  - dotnet pack ./src/Krypt/Krypt.csproj --include-source --include-symbols --configuration Release
 test_script:
   # restore packages for our unit tests
   # - dotnet restore ./src/Krypt.Test.csproj --verbosity m
   # run the unit tests (requires changing into the test directory)
   - dotnet test ./src/Krypt.Test/Krypt.Test.csproj
+deploy:
+  provider: NuGet
+  name: production
+  on:
+    branch: master
+  api_key:
+    secure: lvyCj7LQWuEq//G7DuoqV8VHKshnrlGdULqs9WinPEt297+6u2c5tHjIiRavHqxD
+  skip_symbols: false
+  artifact: /.*\.nupkg/
+after_build:
+  # For once the build has completed
 on_finish :
   # any cleanup in here
 deploy: off

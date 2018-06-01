@@ -33,7 +33,7 @@
         <e p="Krypt.Test.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
+            <e p="netcoreapp2.0" t="Include">
               <e p="Krypt.Test.AssemblyInfo.cs" t="Include" />
               <e p="Krypt.Test.Program.cs" t="Include" />
             </e>
