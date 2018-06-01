@@ -8,7 +8,6 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="Krypt" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Class1.cs" t="Include" />
         <e p="Krypt.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
