@@ -45,4 +45,3 @@ after_build:
   # For once the build has completed
 on_finish :
   # any cleanup in here
-deploy: off
