@@ -26,6 +26,8 @@ before_build:
   # Display minimal restore text
   - dotnet restore ./src/Krypt.sln --verbosity m
 build_script:
+  on:
+    branch: master
   - dotnet pack ./src/Krypt/Krypt.csproj --include-source --include-symbols --configuration Release
 test_script:
   # restore packages for our unit tests
