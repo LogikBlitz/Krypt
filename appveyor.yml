@@ -32,7 +32,7 @@ test_script:
   # run the unit tests (requires changing into the test directory) Require coverlet for coverage calculation
   - dotnet test ./src/Krypt.Test/Krypt.Test.csproj /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 after_test:
-  - pwsh: >-
+  - pwsh:
     Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
     #bash codecov.sh -f "coverage.xml" -t 2394754a-a65a-49a7-9277-6a2ba3ee917a
 deploy:
