@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6bdc346-d898-4e16-8420-d2c6d56f296b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Krypt/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krypt/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krypt.Test/Krypt.Test.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krypt.Test/Krypt.Test.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krypt/Class1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Krypt/Krypt.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Krypt/Krypt.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../appveyor.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -243,7 +240,7 @@
       <option name="presentableId" value="Default" />
       <updated>1527855999856</updated>
       <workItem from="1527856002649" duration="3649000" />
-      <workItem from="1527892153017" duration="454000" />
+      <workItem from="1527892153017" duration="605000" />
     </task>
     <task id="LOCAL-00001" summary="set to netcore 2,0 for test">
       <created>1527876819666</created>
@@ -284,7 +281,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4103000" />
+    <option name="totallyTimeSpent" value="4254000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
