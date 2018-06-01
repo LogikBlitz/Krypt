@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6bdc346-d898-4e16-8420-d2c6d56f296b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Krypt/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krypt/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Krypt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Krypt/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../appveyor.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../appveyor.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,19 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Class1.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Krypt/Class1.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <marker date="1527856415530" expanded="true" signature="30:70" ph="{...}" />
-                <marker date="1527856415530" expanded="true" signature="56:68" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="StringCryptographyTests.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Krypt.Test/Text/StringCryptographyTests.cs">
           <provider selected="true" editor-type-id="text-editor" />
@@ -34,11 +21,10 @@
       <file leaf-file-name="CryptographySha512.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Krypt/Passwords/CryptographySha512.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="60">
               <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
               <folding>
                 <marker date="1527856847839" expanded="true" signature="6:68" ph="..." />
-                <marker date="1527856847839" expanded="true" signature="95:1385" ph="{...}" />
                 <marker date="1527856847839" expanded="true" signature="102:291" ph="///     Creates cryptograhical safe hashes using the ... " />
                 <marker date="1527856847839" expanded="true" signature="343:1383" ph="{...}" />
                 <marker date="1527856847839" expanded="true" signature="358:592" ph="///     Computes a secure hash from the input data. ... " />
@@ -52,11 +38,10 @@
       <file leaf-file-name="EncryptionProvider.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Krypt/Passwords/EncryptionProvider.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
+            <state relative-caret-position="510">
               <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
               <folding>
                 <marker date="1527856844605" expanded="true" signature="6:68" ph="..." />
-                <marker date="1527856844605" expanded="true" signature="95:4701" ph="{...}" />
                 <marker date="1527856844605" expanded="true" signature="155:4699" ph="{...}" />
                 <marker date="1527856844605" expanded="true" signature="293:562" ph="{...}" />
                 <marker date="1527856844605" expanded="true" signature="572:709" ph="///     Will create a default setup using a &lt;see cref=&quot;CryptographySha512&quot; /&gt; hash algorith. ... " />
@@ -81,7 +66,7 @@
       <file leaf-file-name="EncryptionProviderTests.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Krypt.Test/Passwords/EncryptionProviderTests.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="1140">
               <caret line="76" column="79" selection-start-line="76" selection-start-column="79" selection-end-line="76" selection-end-column="79" />
             </state>
           </provider>
@@ -94,7 +79,6 @@
               <caret line="12" selection-start-line="12" selection-end-line="25" selection-end-column="8" />
               <folding>
                 <marker date="1527859837924" expanded="false" signature="6:85" ph="..." />
-                <marker date="1527859837924" expanded="true" signature="162:5379" ph="{...}" />
                 <marker date="1527859837924" expanded="true" signature="211:5377" ph="{...}" />
                 <marker date="1527859837924" expanded="true" signature="227:370" ph="/// Generates a 32 byte encryption key. ... " />
                 <marker date="1527859837924" expanded="true" signature="419:641" ph="{...}" />
@@ -124,8 +108,8 @@
       <file leaf-file-name="Krypt.csproj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Krypt/Krypt.csproj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+            <state relative-caret-position="45">
+              <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -136,7 +120,6 @@
             <state relative-caret-position="285">
               <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
               <folding>
-                <marker date="1527856847828" expanded="true" signature="25:820" ph="{...}" />
                 <marker date="1527856847828" expanded="true" signature="32:143" ph="///     Defines simple methods for creating cryptographically safe hashes. ... " />
                 <marker date="1527856847828" expanded="true" signature="178:818" ph="{...}" />
                 <marker date="1527856847828" expanded="true" signature="193:427" ph="///     Computes a secure hash from the input data. ... " />
@@ -152,7 +135,6 @@
             <state relative-caret-position="420">
               <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
               <folding>
-                <marker date="1527856847855" expanded="true" signature="25:1816" ph="{...}" />
                 <marker date="1527856847855" expanded="true" signature="69:1814" ph="{...}" />
                 <marker date="1527856847855" expanded="true" signature="79:410" ph="///     Hashes a originalData by prepending the Salt then hashing the whole string. ... " />
                 <marker date="1527856847855" expanded="true" signature="478:911" ph="///     Validates the hashedPassword up agains the provided password and hash. ... " />
@@ -177,7 +159,6 @@
     <setting file="file://$PROJECT_DIR$/Krypt/Text/StringCryptography.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krypt.Test/Text/StringCryptographyTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Krypt.Test/Passwords/EncryptionProviderTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Krypt/Class1.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -221,12 +202,6 @@
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="Krypt (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Krypt" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Text" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Krypt (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Krypt.Test" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
@@ -265,6 +240,7 @@
       <option name="presentableId" value="Default" />
       <updated>1527855999856</updated>
       <workItem from="1527856002649" duration="3649000" />
+      <workItem from="1527892153017" duration="605000" />
     </task>
     <task id="LOCAL-00001" summary="set to netcore 2,0 for test">
       <created>1527876819666</created>
@@ -305,7 +281,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3649000" />
+    <option name="totallyTimeSpent" value="4254000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -318,31 +294,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Errors In Solution" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.50061053" side_tool="true" weight="0.3296582" />
-      <window_info anchor="bottom" id="Unit Tests" visible="true" weight="0.3296582" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50061053" side_tool="true" weight="0.3296582" />
+      <window_info active="true" anchor="bottom" id="Unit Tests" order="7" visible="true" weight="0.3296582" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="NuGet" sideWeight="0.4993895" weight="0.3296582" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" weight="0.3296582" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.4993895" weight="0.3296582" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.3296582" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -358,32 +333,17 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Krypt/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1527856415530" expanded="true" signature="30:70" ph="{...}" />
-            <marker date="1527856415530" expanded="true" signature="56:68" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/share/dotnet/sdk/2.1.300/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="197" column="4" selection-start-line="197" selection-start-column="4" selection-end-line="197" selection-end-column="4" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Krypt.Test/Text/StringCryptographyTests.cs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Krypt/Passwords/CryptographySha512.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="60">
           <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
           <folding>
             <marker date="1527856847839" expanded="true" signature="6:68" ph="..." />
-            <marker date="1527856847839" expanded="true" signature="95:1385" ph="{...}" />
             <marker date="1527856847839" expanded="true" signature="102:291" ph="///     Creates cryptograhical safe hashes using the ... " />
             <marker date="1527856847839" expanded="true" signature="343:1383" ph="{...}" />
             <marker date="1527856847839" expanded="true" signature="358:592" ph="///     Computes a secure hash from the input data. ... " />
@@ -393,43 +353,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Krypt/Passwords/IEncryptionProvider.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
-          <folding>
-            <marker date="1527856847855" expanded="true" signature="25:1816" ph="{...}" />
-            <marker date="1527856847855" expanded="true" signature="69:1814" ph="{...}" />
-            <marker date="1527856847855" expanded="true" signature="79:410" ph="///     Hashes a originalData by prepending the Salt then hashing the whole string. ... " />
-            <marker date="1527856847855" expanded="true" signature="478:911" ph="///     Validates the hashedPassword up agains the provided password and hash. ... " />
-            <marker date="1527856847855" expanded="true" signature="992:1219" ph="///     Creates a Cryptological secure password randomly. ... " />
-            <marker date="1527856847855" expanded="true" signature="1279:1525" ph="///     Creates a Cryptological secure password randomly using the default length defined by the ... " />
-            <marker date="1527856847855" expanded="true" signature="1568:1777" ph="///     Generates a random Salt with the length defined in &lt;see cref=&quot;ICryptography.MinimumSaltLength&quot; /&gt;c ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Krypt/Passwords/ICryptography.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding>
-            <marker date="1527856847828" expanded="true" signature="25:820" ph="{...}" />
-            <marker date="1527856847828" expanded="true" signature="32:143" ph="///     Defines simple methods for creating cryptographically safe hashes. ... " />
-            <marker date="1527856847828" expanded="true" signature="178:818" ph="{...}" />
-            <marker date="1527856847828" expanded="true" signature="193:427" ph="///     Computes a secure hash from the input data. ... " />
-            <marker date="1527856847828" expanded="true" signature="478:773" ph="///     Provides info on the complexity of the algorithms output fron &lt;see cref=&quot;ComputeHash&quot; /&gt;. ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Krypt/Passwords/EncryptionProvider.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
+        <state relative-caret-position="510">
           <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
           <folding>
             <marker date="1527856844605" expanded="true" signature="6:68" ph="..." />
-            <marker date="1527856844605" expanded="true" signature="95:4701" ph="{...}" />
             <marker date="1527856844605" expanded="true" signature="155:4699" ph="{...}" />
             <marker date="1527856844605" expanded="true" signature="293:562" ph="{...}" />
             <marker date="1527856844605" expanded="true" signature="572:709" ph="///     Will create a default setup using a &lt;see cref=&quot;CryptographySha512&quot; /&gt; hash algorith. ... " />
@@ -452,7 +381,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Krypt.Test/Passwords/EncryptionProviderTests.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="1140">
           <caret line="76" column="79" selection-start-line="76" selection-start-column="79" selection-end-line="76" selection-end-column="79" />
         </state>
       </provider>
@@ -463,7 +392,159 @@
           <caret line="12" selection-start-line="12" selection-end-line="25" selection-end-column="8" />
           <folding>
             <marker date="1527859837924" expanded="false" signature="6:85" ph="..." />
-            <marker date="1527859837924" expanded="true" signature="162:5379" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="211:5377" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="227:370" ph="/// Generates a 32 byte encryption key. ... " />
+            <marker date="1527859837924" expanded="true" signature="419:641" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="475:631" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="668:1003" ph="/// Extension method. Encrypt a string using the provided string key with the AES algorithm ... " />
+            <marker date="1527859837924" expanded="true" signature="1075:1145" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="1163:1487" ph="/// Encrypt a string using the provided string key using the AES algorithm ... " />
+            <marker date="1527859837924" expanded="true" signature="1566:3013" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="1964:3003" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="2109:2989" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="2190:2971" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="2399:2507" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="3024:3349" ph="/// Extension method: Decrypt a AES cipher string using the provided key ... " />
+            <marker date="1527859837924" expanded="true" signature="3423:3494" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="3504:3817" ph="/// Decrypt a AES cipher string using the provided key ... " />
+            <marker date="1527859837924" expanded="true" signature="3897:5371" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="4623:5361" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="4761:5347" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="4883:5293" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="5015:5271" ph="{...}" />
+            <marker date="1527859837924" expanded="true" signature="5121:5245" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Krypt/Passwords/ICryptography.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding>
+            <marker date="1527856847828" expanded="true" signature="32:143" ph="///     Defines simple methods for creating cryptographically safe hashes. ... " />
+            <marker date="1527856847828" expanded="true" signature="178:818" ph="{...}" />
+            <marker date="1527856847828" expanded="true" signature="193:427" ph="///     Computes a secure hash from the input data. ... " />
+            <marker date="1527856847828" expanded="true" signature="478:773" ph="///     Provides info on the complexity of the algorithms output fron &lt;see cref=&quot;ComputeHash&quot; /&gt;. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Krypt/Passwords/IEncryptionProvider.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
+          <folding>
+            <marker date="1527856847855" expanded="true" signature="69:1814" ph="{...}" />
+            <marker date="1527856847855" expanded="true" signature="79:410" ph="///     Hashes a originalData by prepending the Salt then hashing the whole string. ... " />
+            <marker date="1527856847855" expanded="true" signature="478:911" ph="///     Validates the hashedPassword up agains the provided password and hash. ... " />
+            <marker date="1527856847855" expanded="true" signature="992:1219" ph="///     Creates a Cryptological secure password randomly. ... " />
+            <marker date="1527856847855" expanded="true" signature="1279:1525" ph="///     Creates a Cryptological secure password randomly using the default length defined by the ... " />
+            <marker date="1527856847855" expanded="true" signature="1568:1777" ph="///     Generates a random Salt with the length defined in &lt;see cref=&quot;ICryptography.MinimumSaltLength&quot; /&gt;c ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Krypt/Krypt.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Krypt/Class1.cs" />
+    <entry file="file:///usr/local/share/dotnet/sdk/2.1.300/Sdks/Microsoft.NET.Sdk/targets/Microsoft.PackageDependencyResolution.targets">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="197" column="4" selection-start-line="197" selection-start-column="4" selection-end-line="197" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Krypt.Test/Text/StringCryptographyTests.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Krypt/Passwords/CryptographySha512.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding>
+            <marker date="1527856847839" expanded="true" signature="6:68" ph="..." />
+            <marker date="1527856847839" expanded="true" signature="102:291" ph="///     Creates cryptograhical safe hashes using the ... " />
+            <marker date="1527856847839" expanded="true" signature="343:1383" ph="{...}" />
+            <marker date="1527856847839" expanded="true" signature="358:592" ph="///     Computes a secure hash from the input data. ... " />
+            <marker date="1527856847839" expanded="true" signature="639:1008" ph="{...}" />
+            <marker date="1527856847839" expanded="true" signature="1018:1333" ph="///     Provides info on the complexity of the algorithms output fron &lt;see cref=&quot;ICryptography.ComputeHash&quot; /&gt;. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Krypt/Passwords/IEncryptionProvider.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="81" selection-start-line="28" selection-start-column="81" selection-end-line="28" selection-end-column="81" />
+          <folding>
+            <marker date="1527856847855" expanded="true" signature="69:1814" ph="{...}" />
+            <marker date="1527856847855" expanded="true" signature="79:410" ph="///     Hashes a originalData by prepending the Salt then hashing the whole string. ... " />
+            <marker date="1527856847855" expanded="true" signature="478:911" ph="///     Validates the hashedPassword up agains the provided password and hash. ... " />
+            <marker date="1527856847855" expanded="true" signature="992:1219" ph="///     Creates a Cryptological secure password randomly. ... " />
+            <marker date="1527856847855" expanded="true" signature="1279:1525" ph="///     Creates a Cryptological secure password randomly using the default length defined by the ... " />
+            <marker date="1527856847855" expanded="true" signature="1568:1777" ph="///     Generates a random Salt with the length defined in &lt;see cref=&quot;ICryptography.MinimumSaltLength&quot; /&gt;c ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Krypt/Passwords/ICryptography.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+          <folding>
+            <marker date="1527856847828" expanded="true" signature="32:143" ph="///     Defines simple methods for creating cryptographically safe hashes. ... " />
+            <marker date="1527856847828" expanded="true" signature="178:818" ph="{...}" />
+            <marker date="1527856847828" expanded="true" signature="193:427" ph="///     Computes a secure hash from the input data. ... " />
+            <marker date="1527856847828" expanded="true" signature="478:773" ph="///     Provides info on the complexity of the algorithms output fron &lt;see cref=&quot;ComputeHash&quot; /&gt;. ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Krypt/Passwords/EncryptionProvider.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+          <folding>
+            <marker date="1527856844605" expanded="true" signature="6:68" ph="..." />
+            <marker date="1527856844605" expanded="true" signature="155:4699" ph="{...}" />
+            <marker date="1527856844605" expanded="true" signature="293:562" ph="{...}" />
+            <marker date="1527856844605" expanded="true" signature="572:709" ph="///     Will create a default setup using a &lt;see cref=&quot;CryptographySha512&quot; /&gt; hash algorith. ... " />
+            <marker date="1527856844605" expanded="true" signature="791:4693" ph="Implementation of IPasswordControl" />
+            <marker date="1527856844605" expanded="true" signature="843:1083" ph="///     Creates a random Salt with a size that is at least the size specified. ... " />
+            <marker date="1527856844605" expanded="true" signature="1132:1697" ph="{...}" />
+            <marker date="1527856844605" expanded="true" signature="1708:2039" ph="///     Hashes a originalData by prepending the Salt then hashing the whole string. ... " />
+            <marker date="1527856844605" expanded="true" signature="2103:2777" ph="{...}" />
+            <marker date="1527856844605" expanded="true" signature="2787:3218" ph="///     Validates the hashedPassword against the provided password and hash. ... " />
+            <marker date="1527856844605" expanded="true" signature="3295:3426" ph="{...}" />
+            <marker date="1527856844605" expanded="true" signature="3436:3663" ph="///     Creates a Cryptological secure password randomly. ... " />
+            <marker date="1527856844605" expanded="true" signature="3719:3967" ph="{...}" />
+            <marker date="1527856844605" expanded="true" signature="3977:4224" ph="///     Creates a Cryptological secure password randomly using the defaul;t length defined by the ... " />
+            <marker date="1527856844605" expanded="true" signature="4263:4359" ph="{...}" />
+            <marker date="1527856844605" expanded="true" signature="4370:4579" ph="///     Generates a random Salt with the length defined in &lt;see cref=&quot;ICryptography.MinimumSaltLength&quot; /&gt;c ... " />
+            <marker date="1527856844605" expanded="true" signature="4616:4673" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Krypt.Test/Passwords/EncryptionProviderTests.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="76" column="79" selection-start-line="76" selection-start-column="79" selection-end-line="76" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Krypt/Text/StringCryptography.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" selection-start-line="12" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <marker date="1527859837924" expanded="false" signature="6:85" ph="..." />
             <marker date="1527859837924" expanded="true" signature="211:5377" ph="{...}" />
             <marker date="1527859837924" expanded="true" signature="227:370" ph="/// Generates a 32 byte encryption key. ... " />
             <marker date="1527859837924" expanded="true" signature="419:641" ph="{...}" />
@@ -491,8 +572,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Krypt/Krypt.csproj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+        <state relative-caret-position="45">
+          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
         </state>
       </provider>
     </entry>
