@@ -34,7 +34,7 @@ test_script:
 after_test:
   - pwsh: >-
     Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
-    bash codecov.sh -f "coverage.xml" -t 2394754a-a65a-49a7-9277-6a2ba3ee917a
+    #bash codecov.sh -f "coverage.xml" -t 2394754a-a65a-49a7-9277-6a2ba3ee917a
 deploy:
   provider: NuGet
   name: production
