@@ -17,7 +17,7 @@ dotnet_csproj:
   file_version: '{version}'
   informational_version: '{version}'
 cache:
-- '%USERPROFILE%\.nuget\packages'
+  #- '%USERPROFILE%\.nuget\packages'
 init:
   # Good practise, because Windows line endings are different from Unix/Linux ones
   - git config --global core.autocrlf true
