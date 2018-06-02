@@ -48,6 +48,13 @@ deploy:
     name: production
     on:
       branch: master
+    api_key:
+      secure: Md9Vp7ciqXOXdcslNVOamwENnV+yvnfUUo72fq34WfnTeUND4WuLLdhMH68PLjP4
+    skip_symbols: false
+    artifact: /.*\.nupkg/
+  - provider: NuGet #support tags
+    name: testing
+    on:
       branch: develop
     api_key:
       secure: Md9Vp7ciqXOXdcslNVOamwENnV+yvnfUUo72fq34WfnTeUND4WuLLdhMH68PLjP4
