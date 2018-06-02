@@ -21,7 +21,7 @@ cache:
 init:
   # Good practise, because Windows line endings are different from Unix/Linux ones
   - git config --global core.autocrlf true
-  - ps: IF ($env:APPVEYOR_REPO_BRANCH -eq "master") {$env:NUGETPACKAGE_VERSIONSUFFIX = ""} else {$env:NUGETPACKAGE_VERSIONSUFFIX = "-beta"}
+  - ps: IF ($env:APPVEYOR_REPO_BRANCH -eq "master") {$env:NUGETPACKAGE_VERSIONSUFFIX = ""} else {$env:NUGETPACKAGE_VERSIONSUFFIX = "beta"}
   - ps: Write-Host $env:NUGETPACKAGE_VERSIONSUFFIX
 # set clone depth
 clone_depth: 5 
