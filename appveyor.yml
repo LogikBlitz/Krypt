@@ -26,7 +26,12 @@ before_build:
   # Display minimal restore text
   - dotnet restore ./src/Krypt.sln --verbosity m
 build_script:
-  - dotnet pack ./src/Krypt/Krypt.csproj --include-source --include-symbols --configuration Release
+  on:
+    branch: development
+      - dotnet pack ./src/Krypt/Krypt.csproj --include-source --include-symbols --configuration Release --version-suffix "-beta"
+  on:
+    branch: master
+      - dotnet pack ./src/Krypt/Krypt.csproj --include-source --include-symbols --configuration Release --version-suffix
 test_script:
   # restore packages for our unit tests
   # run the unit tests (requires changing into the test directory) Require coverlet for coverage calculation
@@ -37,10 +42,14 @@ after_test:
 
     bash codecov.sh -f "./src/Krypt.Test/coverage.xml" -t 2394754a-a65a-49a7-9277-6a2ba3ee917a
 deploy:
-  provider: NuGet
-  name: production
-  on:
-    branch: master
+  - provider: NuGet
+    name: production
+    on:
+      branch: master
+  - provider: NuGet
+    name: production
+    on:
+        appveyor_repo_tag: true
   api_key:
     secure: Md9Vp7ciqXOXdcslNVOamwENnV+yvnfUUo72fq34WfnTeUND4WuLLdhMH68PLjP4
   skip_symbols: false
