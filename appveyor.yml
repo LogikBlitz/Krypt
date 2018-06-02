@@ -5,8 +5,9 @@ branches:
   - master
   - develop
 environment:
-  codecov_apikey:
+  CODECOV_APIKEY:
     secure: kwGF/Xd38DP8DGLzBOvX1xaSa+hUeCGV9prpnw79L3wtC4i9ivfGkhvKfANTUWiq
+  NUGETPACKAGE_PREFIX_LABEL:
 dotnet_csproj:
   patch: true
   file: '**\Krypt.csproj'
@@ -20,6 +21,7 @@ cache:
 init:
   # Good practise, because Windows line endings are different from Unix/Linux ones
   - git config --global core.autocrlf true
+  - ps: IF ($env:APPVEYOR_REPO_BRANCH -eq "master") {$env:NUGETPACKAGE_PREFIX_LABEL = ""} else {$env:NUGETPACKAGE_PREFIX_LABEL = "-beta"}
 # set clone depth
 clone_depth: 5 
 install:
@@ -30,7 +32,7 @@ before_build:
   # Display minimal restore text
   - dotnet restore ./src/Krypt.sln --verbosity m
 build_script:
-  - if [%APPVEYOR_REPO_BRANCH%]==[master] dotnet pack ./src/Krypt/Krypt.csproj --nobuild --include-source --include-symbols --configuration Release else dotnet pack ./src/Krypt/Krypt.csproj --nobuild --include-source --include-symbols --configuration Release --version-suffix "-beta"
+  - dotnet pack ./src/Krypt/Krypt.csproj --nobuild --include-source --include-symbols --configuration Release --version-suffix ""
 test_script:
   # restore packages for our unit tests
   # run the unit tests (requires changing into the test directory) Require coverlet for coverage calculation
@@ -39,7 +41,7 @@ after_test:
 - ps: >-
     Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
 
-    bash codecov.sh -f "./src/Krypt.Test/coverage.xml" -t %codecov_apikey%
+    bash codecov.sh -f "./src/Krypt.Test/coverage.xml" -t %CODECOV_APIKEY%
 deploy:
   - provider: NuGet #support regular commit to master
     name: production
