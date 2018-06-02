@@ -3,8 +3,11 @@ image: Visual Studio 2017
 branches:
   only:
   - master
-  - netstandard
   - develop
+environment:
+  CODECOV_APIKEY:
+    secure: kwGF/Xd38DP8DGLzBOvX1xaSa+hUeCGV9prpnw79L3wtC4i9ivfGkhvKfANTUWiq
+  NUGETPACKAGE_VERSIONSUFFIX:
 dotnet_csproj:
   patch: true
   file: '**\Krypt.csproj'
@@ -13,9 +16,13 @@ dotnet_csproj:
   assembly_version: '{version}'
   file_version: '{version}'
   informational_version: '{version}'
+cache:
+  #- '%USERPROFILE%\.nuget\packages'
 init:
   # Good practise, because Windows line endings are different from Unix/Linux ones
   - git config --global core.autocrlf true
+  - ps: IF ($env:APPVEYOR_REPO_BRANCH -eq "master") {$env:NUGETPACKAGE_VERSIONSUFFIX = ""} else {$env:NUGETPACKAGE_VERSIONSUFFIX = "beta"}
+  - ps: Write-Host $env:NUGETPACKAGE_VERSIONSUFFIX
 # set clone depth
 clone_depth: 5 
 install:
@@ -26,7 +33,7 @@ before_build:
   # Display minimal restore text
   - dotnet restore ./src/Krypt.sln --verbosity m
 build_script:
-  - dotnet pack ./src/Krypt/Krypt.csproj --include-source --include-symbols --configuration Release
+  - dotnet pack ./src/Krypt/Krypt.csproj --include-source --include-symbols --configuration Release --version-suffix %NUGETPACKAGE_VERSIONSUFFIX%
 test_script:
   # restore packages for our unit tests
   # run the unit tests (requires changing into the test directory) Require coverlet for coverage calculation
@@ -35,16 +42,24 @@ after_test:
 - ps: >-
     Invoke-WebRequest -Uri 'https://codecov.io/bash' -OutFile codecov.sh
 
-    bash codecov.sh -f "./src/Krypt.Test/coverage.xml" -t 2394754a-a65a-49a7-9277-6a2ba3ee917a
+    bash codecov.sh -f "./src/Krypt.Test/coverage.xml" -t %CODECOV_APIKEY%
 deploy:
-  provider: NuGet
-  name: production
-  on:
-    branch: master
-  api_key:
-    secure: Md9Vp7ciqXOXdcslNVOamwENnV+yvnfUUo72fq34WfnTeUND4WuLLdhMH68PLjP4
-  skip_symbols: false
-  artifact: /.*\.nupkg/
+  - provider: NuGet #support regular commit to master
+    name: production
+    on:
+      branch: master
+    api_key:
+      secure: Md9Vp7ciqXOXdcslNVOamwENnV+yvnfUUo72fq34WfnTeUND4WuLLdhMH68PLjP4
+    skip_symbols: false
+    artifact: /.*\.nupkg/
+  - provider: NuGet #support tags
+    name: testing
+    on:
+      branch: develop
+    api_key:
+      secure: Md9Vp7ciqXOXdcslNVOamwENnV+yvnfUUo72fq34WfnTeUND4WuLLdhMH68PLjP4
+    skip_symbols: false
+    artifact: /.*\.nupkg/
 artifacts:
   - path: '**\*.nupkg' # find all NuGet packages recursively'
     name: krypt
